@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+    position: fixed;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & > * {
+        color: var(--clr-secondary-faint);
+        cursor: pointer;
+        transition: color 0.3s ease-out 0s;
+
+        &:hover {
+            color: var(--clr-secondary-light);
+        }
+    }
+}
