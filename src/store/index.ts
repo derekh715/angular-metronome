@@ -20,7 +20,7 @@ export const metaReducers = [localStorageSyncReducer];
 export const selectSettings = createSelector(
     createFeatureSelector<SettingsState>("settings"),
     (state) => {
-        return;
+        return state;
     }
 );
 

@@ -1,5 +1,5 @@
 <div class="container">
-    <app-button>{{
+    <app-button (clickEvent)="playOrStop()">{{
         isPlaying ? "Stop Metronome" : "Start Metronome"
     }}</app-button>
 </div>

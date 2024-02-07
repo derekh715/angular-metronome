@@ -1,5 +1,5 @@
 <div class="beats">
     @if (isPlaying) { @for (beat of counter(); track beat) {
-    <app-beat />
+    <app-beat [isCurrent]="currentBeat === beat" />
     } }
 </div>
