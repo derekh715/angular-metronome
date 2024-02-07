@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
+import { DecimalPipe } from "@angular/common";
 import { NgIconsModule, provideNgIconsConfig } from "@ng-icons/core";
 import {
     featherGithub,
@@ -9,6 +10,11 @@ import {
     featherSettings,
     featherSun,
 } from "@ng-icons/feather-icons";
+import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { settingsReducer } from "src/store/settings.reducer";
+import { tempoReducer } from "src/store/tempo.reducer";
+import { metaReducers } from "../store";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BeatComponent } from "./beat/beat.component";
@@ -44,6 +50,15 @@ import { TapButtonComponent } from "./tap-button/tap-button.component";
             featherMoon,
             featherSun,
         }),
+        StoreModule.forRoot(
+            {
+                settings: settingsReducer,
+                tempo: tempoReducer,
+            },
+            { metaReducers }
+        ),
+        StoreDevtoolsModule.instrument({}),
+        DecimalPipe,
     ],
     providers: [provideNgIconsConfig({ size: "3rem" })],
     bootstrap: [AppComponent],

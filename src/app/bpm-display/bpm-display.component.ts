@@ -6,5 +6,5 @@ import { Component, Input } from "@angular/core";
     styleUrls: ["./bpm-display.component.scss"],
 })
 export class BpmDisplayComponent {
-    @Input() bpm: number = 0;
+    @Input() tempo: number = 0;
 }
