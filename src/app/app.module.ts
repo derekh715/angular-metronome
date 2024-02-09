@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { DecimalPipe } from "@angular/common";
+import { ReactiveFormsModule } from "@angular/forms";
 import { NgIconsModule, provideNgIconsConfig } from "@ng-icons/core";
 import {
     featherGithub,
@@ -26,6 +27,7 @@ import { NavComponent } from "./nav/nav.component";
 import { PlayButtonComponent } from "./play-button/play-button.component";
 import { SettingsPageComponent } from "./settings-page/settings-page.component";
 import { TapButtonComponent } from "./tap-button/tap-button.component";
+import { TempoSliderComponent } from "./tempo-slider/tempo-slider.component";
 
 @NgModule({
     declarations: [
@@ -39,6 +41,7 @@ import { TapButtonComponent } from "./tap-button/tap-button.component";
         MetronomePageComponent,
         SettingsPageComponent,
         NavComponent,
+        TempoSliderComponent,
     ],
     imports: [
         BrowserModule,
@@ -59,6 +62,7 @@ import { TapButtonComponent } from "./tap-button/tap-button.component";
         ),
         StoreDevtoolsModule.instrument({}),
         DecimalPipe,
+        ReactiveFormsModule,
     ],
     providers: [provideNgIconsConfig({ size: "3rem" })],
     bootstrap: [AppComponent],
