@@ -8,7 +8,7 @@ export const initialState: SettingsState = {
 
 export const settingsReducer = createReducer(
     initialState,
-    on(changeSettings, (payload) => {
+    on(changeSettings, (_, payload) => {
         return payload;
     })
 );
