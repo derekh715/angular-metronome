@@ -1,0 +1,16 @@
+ul {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+
+    & li {
+        margin-top: 0.5rem;
+    }
+
+    @media screen and (max-width: 690px) {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.5rem;
+    }
+}

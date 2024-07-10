@@ -5,11 +5,10 @@ import { DecimalPipe } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { NgIconsModule, provideNgIconsConfig } from "@ng-icons/core";
 import {
+    featherBook,
     featherGithub,
-    featherMoon,
     featherMusic,
     featherSettings,
-    featherSun,
 } from "@ng-icons/feather-icons";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
@@ -27,6 +26,7 @@ import { NavComponent } from "./nav/nav.component";
 import { PlayButtonComponent } from "./play-button/play-button.component";
 import { SettingsPageComponent } from "./settings-page/settings-page.component";
 import { TapButtonComponent } from "./tap-button/tap-button.component";
+import { TechPageComponent } from "./tech-page/tech-page.component";
 import { TempoSliderComponent } from "./tempo-slider/tempo-slider.component";
 
 @NgModule({
@@ -40,6 +40,7 @@ import { TempoSliderComponent } from "./tempo-slider/tempo-slider.component";
         BeatsComponent,
         MetronomePageComponent,
         SettingsPageComponent,
+        TechPageComponent,
         NavComponent,
         TempoSliderComponent,
     ],
@@ -50,8 +51,7 @@ import { TempoSliderComponent } from "./tempo-slider/tempo-slider.component";
             featherSettings,
             featherMusic,
             featherGithub,
-            featherMoon,
-            featherSun,
+            featherBook,
         }),
         StoreModule.forRoot(
             {
