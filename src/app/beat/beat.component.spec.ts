@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
+import { By } from "@angular/platform-browser";
 import { BeatComponent } from "./beat.component";
 
 describe("BeatComponent", () => {
@@ -16,7 +17,17 @@ describe("BeatComponent", () => {
         fixture.detectChanges();
     });
 
-    it("should create", () => {
-        expect(component).toBeTruthy();
+    it("should apply active class correctly", () => {
+        // is current
+        component.isCurrent = true;
+        fixture.detectChanges();
+        let debugEl = fixture.debugElement.query(By.css(".active"));
+        expect(debugEl).not.toBeNull();
+
+        // not current
+        component.isCurrent = false;
+        fixture.detectChanges();
+        debugEl = fixture.debugElement.query(By.css(".active"));
+        expect(debugEl).toBeNull();
     });
 });

@@ -8,9 +8,6 @@ import { detectTempo } from "src/store/actions";
     styleUrls: ["./tap-button.component.scss"],
 })
 export class TapButtonComponent {
-    // keep the last ten timestamps
-    lastTimestamps: number[] = [];
-
     constructor(private store: Store) {}
 
     updateTempo() {
